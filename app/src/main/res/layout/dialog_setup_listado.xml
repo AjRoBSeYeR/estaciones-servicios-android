@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:src="@drawable/icon"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:scaleType="center"
+        android:background="#FFFFBB33"
+        android:contentDescription="@string/app_name" />
+    <EditText
+        android:id="@+id/username"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:hint="dd" />
+    <EditText
+        android:id="@+id/password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="sans-serif"
+        android:hint="dd"/>
+</LinearLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="64dp"-->
+        <!--android:background="#FFFFBB33"-->
+        <!--android:contentDescription="@string/app_name"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@drawable/ic_ajustes" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/tv_tipoCombustible"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="8dp"-->
+        <!--android:text="Tipo combustible"-->
+        <!--android:textSize="24sp" />-->
+
+    <!--<RadioGroup-->
+        <!--android:id="@+id/radioGroup"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:padding="8dp"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/tv_tipoCombustible">-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/gasolina"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:onClick="onRadioButtonClickedgasolina"-->
+            <!--android:text="Gasolina" />-->
+
+        <!--<RadioButton-->
+            <!--android:id="@+id/diesel"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="Diesel" />-->
+
+    <!--</RadioGroup>-->
+
+    <!--<com.google.android.material.chip.ChipGroup-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/tv_num_res"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:padding="8dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="Resultados"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:textSize="24sp" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<SeekBar&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/seekBar2"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:max="100" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<EditText&ndash;&gt;-->
+    <!--&lt;!&ndash;android:id="@+id/editText"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:inputType="number"&ndash;&gt;-->
+    <!--&lt;!&ndash;android:text="10" />&ndash;&gt;-->
+
+    <!--<androidx.constraintlayout.widget.Guideline-->
+        <!--android:id="@+id/guideline4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical" />-->
+
+
+<!--</LinearLayout>-->
+

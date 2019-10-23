@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="android.training.basicempty.MainActivity">
+
+    <item
+        android:id="@+id/registroBtn"
+        android:orderInCategory="100"
+        android:title="@string/registro"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/btnSync"
+        android:orderInCategory="100"
+        android:title="@string/sync"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/btnListado"
+        android:orderInCategory="100"
+        android:title="@string/listado"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/btnMapa"
+        android:orderInCategory="100"
+        android:title="@string/mapa"
+        app:showAsAction="never" />
+</menu>

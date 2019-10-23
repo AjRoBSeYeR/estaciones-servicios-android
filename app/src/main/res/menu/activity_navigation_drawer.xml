@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/btnHome"
+            android:icon="@drawable/ic_ajustes"
+            android:title="@string/home" />
+
+        <item
+            android:id="@+id/btnSync"
+            android:icon="@drawable/ic_ajustes"
+            android:title="@string/sync" />
+        <item
+            android:id="@+id/registroBtn"
+            android:icon="@drawable/ic_ajustes"
+            android:title="@string/registro" />
+
+
+        <item
+            android:id="@+id/btnListado"
+            android:icon="@drawable/ic_ajustes"
+            android:title="@string/listado" />
+        <item
+            android:id="@+id/btnMapa"
+            android:icon="@drawable/ic_ajustes"
+            android:title="@string/mapa" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/extra1"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Extra" />
+            <item
+                android:id="@+id/jobScheduler"
+                android:icon="@drawable/ic_menu_send"
+                android:title="JobScheduler" />
+        </menu>
+    </item>
+
+</menu>

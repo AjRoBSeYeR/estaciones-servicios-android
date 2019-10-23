@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">GasApp</string>
+    <!--Menu -->
+    <string name="geo">Geo</string>
+    <string name="seleccionar_provincia">Seleccionar provincia</string>
+
+    <string name="mapa">Mapa</string>
+    <string name="registro">Registro</string>
+    <string name="extra">Extra</string>
+    <string name="jobScheduler">jobScheduler</string>
+    <string name="home">Home</string>
+
+    <!--Map Style -->
+    <string name="normal_map">Clasico</string>
+    <string name="hybrid_map">Hibrida</string>
+    <string name="satellite_map">Satelite</string>
+    <string name="terrain_map">Relieve</string>
+    <string name="gasapp_map">Gasapp</string>
+    <!--Map Geocoder -->
+    <string name="service_not_available">Internet desconectado, conectalo para usar esta app</string>
+    <string name="invalid_lat_long_used">Invalid coordinates used</string>
+    <string name="no_address_found">No se encuentra la dirección</string>
+    <!--Ubicacion -->
+    <string name="ubicacion_denegada">Ha rechazo conectar la ubicacion</string>
+    <string name="location_permission_denied">Permisos de ubicación denegados, habilita los permisos para usar esta aplicación</string>
+
+    <string name="loading">Cargando…</string>
+
+    <string name="network_not_enabled">Red no disponible</string>
+    <string name="open_location_settings">abrir ajustes ubicación</string>
+
+    <string name="yes">Si</string>
+    <string name="cancel">Cancelar</string>
+    <string name="guardar">Guardar</string>
+    <string name="kilometros">kilometros</string>
+    <string name="litros">litros</string>
+    <string name="euros">euros</string>
+    <string name="fecha">fecha</string>
+    <string name="gasolina_barata">gasolina mas barata</string>
+    <string name="ajustes_mapa">ajustes_mapa</string>
+
+    <string name="sync">Sincronizar</string>
+    <string name="sync_desc">Sincroniza tu ubicación</string>
+    <string name="listado">Listado</string>
+    <string name="restablecer">Restablecer</string>
+    <string name="ver_mapa">Mapa</string>
+    <string name="continuar">Continuar</string>
+
+    <string name="tab_label1">Distancia</string>
+    <string name="tab_label2">Gasolina</string>
+    <string name="tab_label3">Diesel</string>
+    <string name="tab_2">Orden por precio gasolina mas bajo</string>
+    <string name="tab_3">Orden por precio diesel mas bajo</string>
+
+
+    <string name="title_activity_navigation">Navigation</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="atras">atras</string>
+
+
+    <string name="edittext_uri">http://google.com</string>
+    <string name="button_uri">Abrir</string>
+
+    <string name="edittext_loc">Derio</string>
+    <string name="button_loc">Localizacion</string>
+
+    <string name="edittext_share">Me gusta  esta app</string>
+    <string name="button_share">Compartir</string>
+    <string name="share_text_with">Compartir</string>
+
+
+    <string name="notificarme">Notificarme</string>
+    <string name="update_notificarme">Actualziar nofitificacion</string>
+
+
+    <string name="seconds">%1$d s</string>
+    <string name="required_network_type">Tipo de red requerido:</string>
+    <string name="none">Ninguna</string>
+    <string name="any">Cualquiera</string>
+    <string name="wifi">Wifi</string>
+    <string name="requires">Requerido:</string>
+    <string name="device_idle">Dispositivo inactivo</string>
+    <string name="device_charging">Dispositivo cargando</string>
+    <string name="override_deadline">Fecha límite: </string>
+    <string name="not_set">No establecido</string>
+    <string name="schedule_job">Programar</string>
+    <string name="cancel_jobs">Cancelar</string>
+    <string name="job_service">Job Service</string>
+    <string name="job_running">Tu trabajo se ejecutó hasta completar!</string>
+    <string name="job_service_notification">Notificación de servicio de trabajo</string>
+    <string name="notification_channel_description">Notificaciones del Servicio de Empleo</string>
+    <string name="job_scheduled">Trabajo programado, se ejecutará cuando se cumplan las restricciones</string>
+    <string name="no_constraint_toast">Establezca al menos una restricción</string>
+    <string name="jobs_canceled">Jobs Canceled</string>
+    <string name="sincronizar_gps">Sincronizar GPS</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="o_selecciona_provincia">O selecciona provincia</string>
+    <string name="appwidget_text">Ejemplo</string>
+    <string name="add_widget">Añadir widget</string>
+
+
+
+
+
+</resources>
