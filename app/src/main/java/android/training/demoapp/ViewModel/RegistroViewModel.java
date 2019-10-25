@@ -1,11 +1,11 @@
-package android.training.demoapp.ViewModel;
+package android.training.demoapp.viewModel;
 
 import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import android.training.demoapp.Pojo.Registro;
-import android.training.demoapp.Repository.RegistrosRepository;
+import android.training.demoapp.pojo.Registro;
+import android.training.demoapp.data.repository.RegistrosRepository;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
-package android.training.demoapp.Adapters;
+package android.training.demoapp.adapters;
 
 import android.content.Context;
-import android.training.demoapp.Pojo.HomeItem;
+import android.training.demoapp.pojo.HomeItem;
 import android.training.demoapp.R;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.HomeViewHolder> {

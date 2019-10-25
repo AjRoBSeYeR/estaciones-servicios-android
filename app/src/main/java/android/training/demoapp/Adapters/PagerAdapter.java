@@ -1,8 +1,8 @@
-package android.training.demoapp.Adapters;
+package android.training.demoapp.adapters;
 
-import android.training.demoapp.Tabs.TabFragment1;
-import android.training.demoapp.Tabs.TabFragment2;
-import android.training.demoapp.Tabs.TabFragment3;
+import android.training.demoapp.activities.tabsListado.TabFragment1;
+import android.training.demoapp.activities.tabsListado.TabFragment2;
+import android.training.demoapp.activities.tabsListado.TabFragment3;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;

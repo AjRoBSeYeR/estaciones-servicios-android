@@ -1,10 +1,10 @@
-package android.training.demoapp.ViewModel;
+package android.training.demoapp.viewModel;
 
 import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-import android.training.demoapp.Pojo.ListaEESSPrecio;
-import android.training.demoapp.Repository.EstacionesRepository;
+import android.training.demoapp.pojo.ListaEESSPrecio;
+import android.training.demoapp.data.repository.EstacionesRepository;
 
 import java.util.List;
 

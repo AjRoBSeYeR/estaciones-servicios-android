@@ -1,4 +1,4 @@
-package android.training.demoapp.Services;
+package android.training.demoapp.services;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -8,7 +8,7 @@ import android.app.job.JobService;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
-import android.training.demoapp.JobSchedulerActivity;
+import android.training.demoapp.activities.JobSchedulerActivity;
 import android.training.demoapp.R;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
@@ -42,8 +42,8 @@ public class NotificationJobService extends JobService {
     }
 
     @Override
-    public boolean onStopJob(JobParameters params) {
-        return true;
+    public boolean onStopJob(JobParameters jobParameters) {
+        return false;
     }
 
 

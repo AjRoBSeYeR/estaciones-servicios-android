@@ -1,5 +1,5 @@
 
-package android.training.demoapp.Pojo;
+package android.training.demoapp.pojo;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -1,4 +1,4 @@
-package android.training.demoapp.Receiver;
+package android.training.demoapp.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

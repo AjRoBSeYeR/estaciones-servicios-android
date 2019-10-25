@@ -1,11 +1,11 @@
-package android.training.demoapp.Receiver;
+package android.training.demoapp.receiver;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.training.demoapp.ImplicitIntentNotifi;
+import android.training.demoapp.activities.ImplicitIntentNotifi;
 import android.training.demoapp.R;
 
 import androidx.core.app.NotificationCompat;
