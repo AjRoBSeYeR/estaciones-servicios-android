@@ -12,6 +12,7 @@ Primer desarrollo de una aplicación nativa en Android, basado en los codelabs d
 	ViewModel
 	GeoPosition
 	Google Maps
+	RecyclerView
 	Share Preferences
 	Retrofit
 	Gson
@@ -19,3 +20,5 @@ Primer desarrollo de una aplicación nativa en Android, basado en los codelabs d
 #### Autor
 
 * **[Imanol Hernando](https://github.com/imanolhernando)**
+
+###### en desarrollo
