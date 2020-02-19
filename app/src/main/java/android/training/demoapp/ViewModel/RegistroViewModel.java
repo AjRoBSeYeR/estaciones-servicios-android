@@ -5,7 +5,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import android.training.demoapp.pojo.Registro;
-import android.training.demoapp.data.repository.RegistrosRepository;
+import android.training.demoapp.repository.RegistrosRepository;
 
 import java.util.List;
 

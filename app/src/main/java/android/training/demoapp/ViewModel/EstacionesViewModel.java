@@ -4,7 +4,7 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import android.training.demoapp.pojo.ListaEESSPrecio;
-import android.training.demoapp.data.repository.EstacionesRepository;
+import android.training.demoapp.repository.EstacionesRepository;
 
 import java.util.List;
 

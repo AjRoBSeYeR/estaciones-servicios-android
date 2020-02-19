@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.training.demoapp.tools.DateConverter;
+import android.training.demoapp.ui.tools.DateConverter;
 
 import androidx.annotation.NonNull;
 

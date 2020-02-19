@@ -4,7 +4,7 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import android.training.demoapp.pojo.Provincia;
-import android.training.demoapp.data.repository.ProvinciaRepository;
+import android.training.demoapp.repository.ProvinciaRepository;
 
 import java.util.List;
 

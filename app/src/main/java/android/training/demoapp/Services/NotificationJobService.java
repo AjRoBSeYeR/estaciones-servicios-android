@@ -8,7 +8,7 @@ import android.app.job.JobService;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
-import android.training.demoapp.activities.JobSchedulerActivity;
+import android.training.demoapp.ui.activities.JobSchedulerActivity;
 import android.training.demoapp.R;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
@@ -17,7 +17,7 @@ import androidx.core.app.NotificationCompat;
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class NotificationJobService extends JobService {
 
-    NotificationManager notificationManager;
+    private NotificationManager notificationManager;
     private static final String PRIMARY_CHANNEL_ID ="job_scheduler_notification_channel";
 
     @Override
@@ -53,10 +53,7 @@ public class NotificationJobService extends JobService {
         if (android.os.Build.VERSION.SDK_INT >=
                 android.os.Build.VERSION_CODES.O) {
 
-            NotificationChannel notificationChannel = new NotificationChannel
-                    (PRIMARY_CHANNEL_ID,
-                            "Job Service notification",
-                            NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel notificationChannel = new NotificationChannel(PRIMARY_CHANNEL_ID, "Job Service notification", NotificationManager.IMPORTANCE_HIGH);
 
             notificationChannel.enableLights(true);
             notificationChannel.setLightColor(Color.RED);

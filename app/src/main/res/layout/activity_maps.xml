@@ -13,7 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.TabsListadoActivity">
+        tools:context=".ui.activities.TabsListadoActivity">
 
         <include layout="@layout/toolbar" />
 
@@ -24,7 +24,7 @@
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".activities.MapsActivity" />
+            tools:context=".ui.activities.MapsActivity" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
