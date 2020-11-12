@@ -76,7 +76,7 @@ private int limiteCombustible;
 //      });
   }
 
-  private void obtenerListadoEstacionesDB(){
+  private void obtenerListadoEstacionesDB1(){
     estacionesViewModel =  new ViewModelProvider(this).get(EstacionesViewModel.class);
     estacionesViewModel.getPorPrecio2(gasolina,limiteCombustible).observe(this, new Observer<List<ListaEESSPrecio>>() {
       @Override
@@ -88,7 +88,7 @@ private int limiteCombustible;
     });
   }
 
-  private void obtenerListadoEstacionesDB1(){
+  private void obtenerListadoEstacionesDB(){
     estacionesViewModel =  new ViewModelProvider(this).get(EstacionesViewModel.class);
     estacionesViewModel.getGasolinaMasBarata().observe(this, new Observer<List<ListaEESSPrecio>>() {
       @Override

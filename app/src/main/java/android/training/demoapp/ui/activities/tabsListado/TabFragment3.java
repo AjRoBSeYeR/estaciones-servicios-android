@@ -72,21 +72,9 @@ public class TabFragment3 extends Fragment {
 
   }
 
-  private void obtenerListadoEstacionesDB(){
-    estacionesViewModel =  new ViewModelProvider(this).get(EstacionesViewModel.class);
-    estacionesViewModel.getPorPrecio2(diesel,limiteCombustible).observe(this, new Observer<List<ListaEESSPrecio>>() {
-      @Override
-      public void onChanged(@Nullable final List<ListaEESSPrecio> est) {
-        Log.d(LOG_TAG, "provc"+ est);
-        ArrayList<ListaEESSPrecio> ListaEESSPrecio = (ArrayList<ListaEESSPrecio>) est;
-        adapter.setRegistros(ListaEESSPrecio);
-      }
-    });
-  }
-
-//  private void obtenerListadoEstacionesDB1(){
-//    estacionesViewModel = new ViewModelProvider(this).get(EstacionesViewModel.class);
-//    estacionesViewModel.getDieselMasBarato().observe(this, new Observer<List<ListaEESSPrecio>>() {
+//  private void obtenerListadoEstacionesDB(){
+//    estacionesViewModel =  new ViewModelProvider(this).get(EstacionesViewModel.class);
+//    estacionesViewModel.getPorPrecio2(diesel,limiteCombustible).observe(this, new Observer<List<ListaEESSPrecio>>() {
 //      @Override
 //      public void onChanged(@Nullable final List<ListaEESSPrecio> est) {
 //        Log.d(LOG_TAG, "provc"+ est);
@@ -95,5 +83,17 @@ public class TabFragment3 extends Fragment {
 //      }
 //    });
 //  }
+
+  private void obtenerListadoEstacionesDB(){
+    estacionesViewModel = new ViewModelProvider(this).get(EstacionesViewModel.class);
+    estacionesViewModel.getDieselMasBarato().observe(this, new Observer<List<ListaEESSPrecio>>() {
+      @Override
+      public void onChanged(@Nullable final List<ListaEESSPrecio> est) {
+        Log.d(LOG_TAG, "provc"+ est);
+        ArrayList<ListaEESSPrecio> ListaEESSPrecio = (ArrayList<ListaEESSPrecio>) est;
+        adapter.setRegistros(ListaEESSPrecio);
+      }
+    });
+  }
 
 }

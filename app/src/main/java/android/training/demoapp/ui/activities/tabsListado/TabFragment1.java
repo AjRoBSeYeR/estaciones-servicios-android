@@ -81,7 +81,7 @@ public class TabFragment1 extends Fragment {
         estacionesViewModel.getCercanas(limiteDistancia).observe(this, new Observer<List<ListaEESSPrecio>>() {
             @Override
             public void onChanged(@Nullable final List<ListaEESSPrecio> est) {
-                Log.d(LOG_TAG, "provc"+ est);
+                Log.e(LOG_TAG, "provc"+ est);
                 ArrayList<ListaEESSPrecio> ListaEESSPrecio = (ArrayList<ListaEESSPrecio>) est;
                 adapter.setRegistros(ListaEESSPrecio);
                 pDialog.dismiss();

@@ -79,7 +79,7 @@ public class ListaEESSPrecio {
     @Expose
     private String precioGasoleoB;
 
-    @SerializedName("Precio Gasolina 95 Protección")
+    @SerializedName("Precio Gasolina 95 E5")
     @ColumnInfo (name = "gasolina_name")
     @Expose
     private String precioGasolina95ProtecciN;

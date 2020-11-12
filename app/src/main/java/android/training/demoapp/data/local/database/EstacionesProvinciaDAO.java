@@ -19,10 +19,10 @@ public interface EstacionesProvinciaDAO {
     void insert(ListaEESSPrecio estaciones);
 
 
-    @Query("SELECT * FROM estaciones_provincia_tabla ORDER BY gasolina_name IS NULL, gasolina_name ASC  LIMIT 10")
+    @Query("SELECT * FROM estaciones_provincia_tabla ORDER BY gasolina_name IS NULL, gasolina_name ASC  LIMIT 100")
     LiveData<List<ListaEESSPrecio>> getGasolinaMasBarata();
 
-    @Query("SELECT * FROM estaciones_provincia_tabla ORDER BY precioGasoleoA IS NULL, precioGasoleoA ASC  LIMIT 10")
+    @Query("SELECT * FROM estaciones_provincia_tabla ORDER BY precioGasoleoA IS NULL, precioGasoleoA ASC  LIMIT 100")
     LiveData<List<ListaEESSPrecio>> getDieselMasBarato();
 
 
