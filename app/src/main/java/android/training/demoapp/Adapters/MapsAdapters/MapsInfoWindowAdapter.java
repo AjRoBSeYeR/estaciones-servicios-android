@@ -1,7 +1,6 @@
-package android.training.demoapp.Adapters.MapsAdapters;
+package android.training.demoapp.adapters.mapsAdapters;
 
-import android.training.demoapp.Pojo.ListaEESSPrecio;
-import android.training.demoapp.Pojo.Mapas.MapCluster;
+import android.training.demoapp.pojo.mapas.MapCluster;
 import android.training.demoapp.R;
 import android.view.LayoutInflater;
 import android.view.View;

@@ -1,6 +1,6 @@
-package android.training.demoapp.Pojo.Mapas;
+package android.training.demoapp.pojo.mapas;
 
-import android.training.demoapp.Pojo.ListaEESSPrecio;
+import android.training.demoapp.pojo.ListaEESSPrecio;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.google.maps.android.clustering.ClusterItem;

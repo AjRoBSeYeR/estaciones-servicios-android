@@ -19,33 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <receiver android:name=".Widget.NewAppWidget">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
 
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/new_app_widget_info" />
-        </receiver>
-        <receiver
-            android:name=".Receiver.AlarmReceiver"
-            android:enabled="true"
-            android:exported="false" />
-
-
-
-
-        <activity
-            android:name=".AjustesActivity"
-            android:label="Ajustes Generales"
-            android:parentActivityName=".HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity" />
-        </activity>
-
-        <activity android:name=".HomeActivity" >
+        <activity android:name=".ui.activities.HomeActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -53,41 +28,49 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SyncActivity"
-            android:parentActivityName=".HomeActivity">
+        <activity
+            android:name=".ui.activities.AjustesActivity"
+            android:label="Ajustes Generales"
+            android:parentActivityName=".ui.activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity" />
-        </activity>
-        <activity android:name=".AgregarRegistroActivity" />
-        <activity
-            android:name=".ListadoRegistrosActivity"
-            android:parentActivityName=".HomeActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity" />
+                android:value=".ui.activities.HomeActivity" />
         </activity>
         <activity
-            android:name=".MapsActivity"
+            android:name=".ui.activities.MapsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".TabsListadoActivity"
+            android:name=".ui.activities.TabsListadoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DetalleEstacionServicio" />
+        <activity android:name=".ui.activities.DetalleEstacionServicio" />
+
+        <activity android:name=".ui.activities.baseMenu.BaseNavDrawerActivity" />
+
+        <activity android:name=".ui.activities.SyncActivity"/>
+        <activity android:name=".ui.activities.AgregarRegistroActivity" />
         <activity
-            android:name=".ImplicitIntentNotifi"
-            android:parentActivityName=".HomeActivity">
+            android:name=".ui.activities.ListadoRegistrosActivity"
+            android:parentActivityName=".ui.activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity" />
+                android:value=".ui.activities.HomeActivity" />
         </activity>
-        <activity android:name=".Helpers.BaseNavDrawerActivity" />
+
         <activity
-            android:name=".JobSchedulerActivity"
-            android:parentActivityName=".HomeActivity">
+            android:name=".ui.activities.ImplicitIntentNotifi"
+            android:parentActivityName=".ui.activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HomeActivity" />
+                android:value=".ui.activities.HomeActivity" />
+        </activity>
+
+
+        <activity
+            android:name=".ui.activities.JobSchedulerActivity"
+            android:parentActivityName=".ui.activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activities.HomeActivity" />
         </activity>
 
         <meta-data
@@ -98,10 +81,24 @@
             android:value="@string/google_maps_key" />
 
         <service
-            android:name=".Services.NotificationJobService"
+            android:name=".services.NotificationJobService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
+        <service android:name=".services.MiIntentService"/>
 
+        <receiver android:name=".ui.widget.NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".ui.receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false" />
 
     </application>
 

@@ -1,11 +1,8 @@
-package android.training.demoapp.Pojo.Mapas;
+package android.training.demoapp.pojo.mapas;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.training.demoapp.Adapters.MapsAdapters.MapsInfoWindowAdapter;
-import android.training.demoapp.MapsActivity;
-import android.training.demoapp.Pojo.ListaEESSPrecio;
+import android.training.demoapp.adapters.mapsAdapters.MapsInfoWindowAdapter;
 import android.training.demoapp.R;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -15,17 +12,12 @@ import android.widget.Toast;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.clustering.Cluster;
-import com.google.maps.android.clustering.ClusterItem;
 import com.google.maps.android.clustering.ClusterManager;
 import com.google.maps.android.clustering.view.DefaultClusterRenderer;
 import com.google.maps.android.ui.IconGenerator;
-
-import java.lang.reflect.Field;
-import java.util.Map;
 
 public class MarkerClusterRenderer extends DefaultClusterRenderer<MapCluster>
         implements

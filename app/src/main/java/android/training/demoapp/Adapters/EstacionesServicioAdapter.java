@@ -1,7 +1,7 @@
-package android.training.demoapp.Adapters;
+package android.training.demoapp.adapters;
 
 import android.content.Context;
-import android.training.demoapp.Pojo.ListaEESSPrecio;
+import android.training.demoapp.pojo.ListaEESSPrecio;
 import android.training.demoapp.R;
 import android.view.LayoutInflater;
 import android.view.View;

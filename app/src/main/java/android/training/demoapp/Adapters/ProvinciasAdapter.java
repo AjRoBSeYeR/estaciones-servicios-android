@@ -1,9 +1,9 @@
-package android.training.demoapp.Adapters;
+package android.training.demoapp.adapters;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import android.training.demoapp.Pojo.Provincia;
+import android.training.demoapp.pojo.Provincia;
 import android.training.demoapp.R;
 import android.view.LayoutInflater;
 import android.view.View;

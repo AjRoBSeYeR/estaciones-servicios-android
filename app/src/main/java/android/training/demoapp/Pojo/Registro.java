@@ -1,4 +1,4 @@
-package android.training.demoapp.Pojo;
+package android.training.demoapp.pojo;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.training.demoapp.Helpers.DateConverter;
+import android.training.demoapp.ui.tools.DateConverter;
 
 import androidx.annotation.NonNull;
 

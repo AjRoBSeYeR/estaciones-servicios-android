@@ -1,4 +1,4 @@
-package android.training.demoapp.Adapters;
+package android.training.demoapp.adapters;
 
 /*
  * Copyright (C) 2018 Google Inc.
@@ -19,7 +19,7 @@ package android.training.demoapp.Adapters;
 import android.content.Context;
 import androidx.recyclerview.widget.RecyclerView;
 import android.text.format.DateFormat;
-import android.training.demoapp.Pojo.Registro;
+import android.training.demoapp.pojo.Registro;
 import android.training.demoapp.R;
 import android.view.LayoutInflater;
 import android.view.View;
