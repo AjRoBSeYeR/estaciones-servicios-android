@@ -4,7 +4,7 @@ package android.training.demoapp.ui.activities.tabsListado;
 import android.content.Context;
 import android.os.Bundle;
 import android.training.demoapp.adapters.EstacionesServicioAdapter;
-import android.training.demoapp.pojo.ListaEESSPrecio;
+import android.training.demoapp.domain.ListaEESSPrecio;
 import android.training.demoapp.R;
 import android.training.demoapp.ui.tools.sharedPrefs.SharedPrefs;
 import android.training.demoapp.viewModel.EstacionesViewModel;
@@ -42,7 +42,7 @@ private int limiteCombustible;
   public TabFragment2() {
 
     this.gasolina = 1;
-    this.limiteCombustible = 10;
+    this.limiteCombustible = 50;
   }
 
 
@@ -76,26 +76,28 @@ private int limiteCombustible;
 //      });
   }
 
-  private void obtenerListadoEstacionesDB1(){
+  private void obtenerListadoEstacionesDB(){
     estacionesViewModel =  new ViewModelProvider(this).get(EstacionesViewModel.class);
     estacionesViewModel.getPorPrecio2(gasolina,limiteCombustible).observe(this, new Observer<List<ListaEESSPrecio>>() {
       @Override
       public void onChanged(@Nullable final List<ListaEESSPrecio> est) {
         Log.d(LOG_TAG, "provc"+ est);
-        ArrayList<ListaEESSPrecio> ListaEESSPrecio = (ArrayList<ListaEESSPrecio>) est;
-        adapter.setRegistros(ListaEESSPrecio);
+          ArrayList<ListaEESSPrecio> ListaEESSPrecio = (ArrayList<ListaEESSPrecio>) est;
+          adapter.setRegistros(ListaEESSPrecio);
       }
     });
   }
 
-  private void obtenerListadoEstacionesDB(){
+  private void obtenerListadoEstacionesDB2(){
     estacionesViewModel =  new ViewModelProvider(this).get(EstacionesViewModel.class);
     estacionesViewModel.getGasolinaMasBarata().observe(this, new Observer<List<ListaEESSPrecio>>() {
       @Override
       public void onChanged(@Nullable final List<ListaEESSPrecio> est) {
         Log.d(LOG_TAG, "provc"+ est);
-        ArrayList<ListaEESSPrecio> ListaEESSPrecio = (ArrayList<ListaEESSPrecio>) est;
-        adapter.setRegistros(ListaEESSPrecio);
+        if(!est.isEmpty()) {
+          ArrayList<ListaEESSPrecio> ListaEESSPrecio = (ArrayList<ListaEESSPrecio>) est;
+          adapter.setRegistros(ListaEESSPrecio);
+        }
       }
     });
   }

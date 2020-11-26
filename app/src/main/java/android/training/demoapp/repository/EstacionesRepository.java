@@ -5,8 +5,7 @@ import androidx.lifecycle.LiveData;
 import android.os.AsyncTask;
 import android.training.demoapp.data.local.database.EstacionesProvinciaDAO;
 import android.training.demoapp.data.local.database.RoomDB;
-import android.training.demoapp.pojo.ListaEESSPrecio;
-import android.training.demoapp.pojo.Registro;
+import android.training.demoapp.domain.ListaEESSPrecio;
 
 import java.util.List;
 
@@ -77,12 +76,11 @@ public class EstacionesRepository {
     }
 
 
-
     public void deleteAll () {
         new deleteAllAsyncTask(estacionesProvinciaDAO).execute();
     }
 
-    private static class deleteAllAsyncTask extends AsyncTask<Registro, Void, Void> {
+    private static class deleteAllAsyncTask extends AsyncTask<Void, Void, Void> {
 
         private EstacionesProvinciaDAO mAsyncTaskDao;
 
@@ -90,10 +88,8 @@ public class EstacionesRepository {
             mAsyncTaskDao = dao;
         }
 
-
         @Override
-        protected Void doInBackground(Registro... registros) {
-            mAsyncTaskDao.deleteAll();
+        protected Void doInBackground(Void... voids) {
             return null;
         }
     }

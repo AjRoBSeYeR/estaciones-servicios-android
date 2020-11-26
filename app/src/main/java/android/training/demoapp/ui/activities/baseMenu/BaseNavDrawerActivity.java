@@ -8,13 +8,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.training.demoapp.ui.activities.HomeActivity;
-import android.training.demoapp.ui.activities.ImplicitIntentNotifi;
-import android.training.demoapp.ui.activities.JobSchedulerActivity;
-import android.training.demoapp.ui.activities.ListadoRegistrosActivity;
 import android.training.demoapp.ui.activities.MapsActivity;
 import android.training.demoapp.R;
 import android.training.demoapp.ui.activities.SyncActivity;
 import android.training.demoapp.ui.activities.TabsListadoActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
@@ -35,7 +33,7 @@ private Context context = this;
         if (drawer.isDrawerOpen(GravityCompat.START )) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-           // super.onBackPressed();
+            super.onBackPressed();
 //            Intent i = new Intent(BaseNavDrawerActivity.this, HomeActivity.class);
 //            startActivity(i);
 //            finish();
@@ -44,17 +42,13 @@ private Context context = this;
 
 
     @SuppressWarnings("StatementWithEmptyBody")
+    // Actualmente no se esta usando
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         Intent i=null;
         switch (id ) {
-            case R.id.registroBtn:
-                i = new Intent(context, ListadoRegistrosActivity.class);
-                startActivity(i);
-                finish();
-                return true;
             case R.id.btnHome:
                  i = new Intent(context, HomeActivity.class);
                 startActivity(i);
@@ -77,22 +71,32 @@ private Context context = this;
                 finish();
                 return true;
 
-            case R.id.extra1:
-                i = new Intent(context, ImplicitIntentNotifi.class);
-                startActivity(i);
-                finish();
-                return true;
-            case R.id.jobScheduler:
-                i = new Intent(context, JobSchedulerActivity.class);
-                startActivity(i);
-                finish();
-                return true;
-
 
             default:
                 // Do nothing
         }
         return true;
+    }
+
+
+    //MENU CERRAR
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.cerrar_menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+
+            case R.id.atras:
+                finish();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 

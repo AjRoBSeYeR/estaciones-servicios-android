@@ -1,5 +1,5 @@
 
-package android.training.demoapp.pojo;
+package android.training.demoapp.domain;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -15,7 +15,6 @@ public class EstacionesServicio {
         this.fecha = fecha;
         this.listaEESSPrecio = listaEESSPrecio;
     }
-
 
     public String getFecha() {
         return fecha;

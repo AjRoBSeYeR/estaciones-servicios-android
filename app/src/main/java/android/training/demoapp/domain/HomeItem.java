@@ -1,4 +1,4 @@
-package android.training.demoapp.pojo;
+package android.training.demoapp.domain;
 
 public class HomeItem {
 

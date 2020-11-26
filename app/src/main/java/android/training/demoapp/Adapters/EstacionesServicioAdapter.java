@@ -1,7 +1,7 @@
 package android.training.demoapp.adapters;
 
 import android.content.Context;
-import android.training.demoapp.pojo.ListaEESSPrecio;
+import android.training.demoapp.domain.ListaEESSPrecio;
 import android.training.demoapp.R;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class EstacionesServicioAdapter extends RecyclerView.Adapter<EstacionesServicioAdapter.EstacionesServicioViewHolder> {
-
-
 
     class EstacionesServicioViewHolder extends RecyclerView.ViewHolder {
         private final TextView rotulo;

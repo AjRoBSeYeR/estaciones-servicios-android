@@ -66,53 +66,13 @@ public class TabsListadoActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_tabs);
         context = this;
-
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
         this.setTabs();
-        //this.ajustesManager();
     }
 
 
-
-//    private void ajustesManager(){
-//
-////        androidx.preference.PreferenceManager.setDefaultValues(context, R.xml.ajustes, false);
-////        SharedPreferences sharedPref =androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-////        Boolean switchPref = sharedPref.getBoolean(AjustesActivity.KEY_AJUSTES, false);
-////        Toast.makeText(context, switchPref.toString(),Toast.LENGTH_LONG).show();
-//
-//        PreferenceManager prefMgr = (PreferenceManager) PreferenceManager.getDefaultSharedPreferences(context);
-//        prefMgr.setSharedPreferencesName("my_preferences");
-//        prefMgr.setSharedPreferencesMode(MODE_WORLD_READABLE);
-//
-//
-//    }
-//
-
-
-
-    private void ajustesManager2(){
-        //Una booleanindicación de si los valores predeterminados deben establecerse más de una vez
-        androidx.preference.PreferenceManager.setDefaultValues(context, R.xml.ajustes, false);
-        SharedPreferences sharedPref =androidx.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-        Boolean switchPref = mPreferences.getBoolean(AjustesActivity.KEY_AJUSTES, false);
-        Toast.makeText(context, switchPref.toString(),Toast.LENGTH_LONG).show();
-    }
 
     @Override
     public void onDialogPositiveClick(DialogFragment dialog) {

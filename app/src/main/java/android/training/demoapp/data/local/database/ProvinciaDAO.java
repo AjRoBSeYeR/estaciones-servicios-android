@@ -5,7 +5,7 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
-import android.training.demoapp.pojo.Provincia;
+import android.training.demoapp.domain.Provincia;
 
 import java.util.List;
 @Dao
@@ -16,6 +16,5 @@ public interface ProvinciaDAO {
 
     @Query("SELECT * from provincia_tabla ORDER BY provincia ASC")
     LiveData<List<Provincia>> getAllProvincias();
-
 
 }

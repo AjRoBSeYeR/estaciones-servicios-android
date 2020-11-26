@@ -1,6 +1,6 @@
 package android.training.demoapp.adapters.mapsAdapters;
 
-import android.training.demoapp.pojo.mapas.MapCluster;
+import android.training.demoapp.domain.mapas.MapCluster;
 import android.training.demoapp.R;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,10 +10,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 
 public class MapsInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
-    //https://medium.com/@tonyshkurenko/work-with-clustermanager-bdf3d70fb0fd
-    // https://ahsensaeed.com/android-custom-info-window-view-on-marker-click-map-utils/
-        //https://github.com/CodingInfinite/GoogleMapMarkerClustering/blob/master/app/src/main/java/spartons/com/googlemapcustommarkercluster/clusterRenderer/MarkerClusterRenderer.java
-    //https://www.zoftino.com/google-maps-android-custom-info-window-example
     private final LayoutInflater mInflater;
 
     public MapsInfoWindowAdapter(LayoutInflater inflater) {
@@ -31,10 +27,6 @@ public class MapsInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
 
         MapCluster infoWindowData = (MapCluster) marker.getTag();
 
-//        TextView title = v.findViewById(R.id.title);
-//        TextView localidad = v.findViewById(R.id.localidad);
-//        TextView gasolina95 = v.findViewById(R.id.gasolina95);
-//        TextView gasoleo = v.findViewById(R.id.gasoleo);
         TextView rotulo = itemView.findViewById(R.id.rotulo);
         TextView localidad = itemView.findViewById(R.id.localidad);
         TextView direccion = itemView.findViewById(R.id.direccion);

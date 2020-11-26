@@ -2,13 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/gasolinaBarata"
-        android:title="@string/gasolina_barata"
-        app:showAsAction="never"/>
 
-    <item android:id="@+id/ajustesMapa"
-        android:title="@string/ajustes_mapa"
-        app:showAsAction="never"/>
 
     <item
     android:id="@+id/refreshMapa"

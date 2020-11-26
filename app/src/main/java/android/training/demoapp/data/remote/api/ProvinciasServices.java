@@ -1,6 +1,6 @@
 package android.training.demoapp.data.remote.api;
 
-import android.training.demoapp.pojo.Provincia;
+import android.training.demoapp.domain.Provincia;
 import android.training.demoapp.viewModel.ProvinciaViewModel;
 import android.util.Log;
 

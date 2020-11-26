@@ -1,4 +1,4 @@
-package android.training.demoapp.pojo.mapas;
+package android.training.demoapp.domain.mapas;
 
 import android.content.Context;
 import android.graphics.Bitmap;

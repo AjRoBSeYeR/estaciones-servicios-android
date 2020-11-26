@@ -14,9 +14,9 @@ import android.os.Bundle;
 import android.training.demoapp.R;
 import android.training.demoapp.adapters.ProvinciasAdapter;
 import android.training.demoapp.ui.tools.fetchAddressTask.FetchAddressTask;
-import android.training.demoapp.pojo.EstacionesServicio;
-import android.training.demoapp.pojo.ListaEESSPrecio;
-import android.training.demoapp.pojo.Provincia;
+import android.training.demoapp.domain.EstacionesServicio;
+import android.training.demoapp.domain.ListaEESSPrecio;
+import android.training.demoapp.domain.Provincia;
 import android.training.demoapp.ui.receiver.InternetReceiver;
 import android.training.demoapp.data.remote.api.EstacionesProvinciasService;
 import android.training.demoapp.data.remote.api.ProvinciasServices;
@@ -79,7 +79,6 @@ public class SyncActivity extends AppCompatActivity implements
     private Button btnIrMapa;
     private Button btnSyncLocation;
 
-    //https://medium.com/@manuelmato/c%C3%B3mo-implementar-una-arquitectura-limpia-en-android-59b7510cef3
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

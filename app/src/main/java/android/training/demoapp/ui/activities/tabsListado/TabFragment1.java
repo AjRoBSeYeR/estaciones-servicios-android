@@ -4,7 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.training.demoapp.adapters.EstacionesServicioAdapter;
-import android.training.demoapp.pojo.ListaEESSPrecio;
+import android.training.demoapp.domain.ListaEESSPrecio;
 import android.training.demoapp.R;
 import android.training.demoapp.ui.tools.sharedPrefs.SharedPrefs;
 import android.training.demoapp.viewModel.EstacionesViewModel;

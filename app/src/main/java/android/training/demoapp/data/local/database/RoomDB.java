@@ -8,16 +8,14 @@ import android.content.Context;
 import android.os.AsyncTask;
 import androidx.annotation.NonNull;
 
-import android.training.demoapp.pojo.ListaEESSPrecio;
-import android.training.demoapp.pojo.Provincia;
-import android.training.demoapp.pojo.Registro;
+import android.training.demoapp.domain.ListaEESSPrecio;
+import android.training.demoapp.domain.Provincia;
 
-@Database(entities = {Registro.class, Provincia.class, ListaEESSPrecio.class}, version = 15, exportSchema = false)
+@Database(entities = {Provincia.class, ListaEESSPrecio.class}, version = 15, exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
 
 
     private static RoomDB INSTANCE;
-    public abstract RegistroDAO registroDAO();
     public abstract ProvinciaDAO provinciaDAO();
     public abstract EstacionesProvinciaDAO estacionesProvinciaDAO();
 
@@ -51,27 +49,11 @@ public abstract class RoomDB extends RoomDatabase {
      */
     private static class PopulateDbAsync extends AsyncTask<Void, Void, Void> {
 
-        private final RegistroDAO mDao;
-
-//        Registro[] registros = {
-//                //new Registro("2019-05-06")
-//        };
         PopulateDbAsync(RoomDB db) {
-            mDao = db.registroDAO();
         }
 
         @Override
         protected Void doInBackground(final Void... params) {
-            // Start the app with a clean database every time.
-            // Not needed if you only populate the database
-            // when it is first created
-
-         //   mDao.deleteAll();
-
-//            for (int i = 0; i <= registros.length - 1; i++) {
-//                Registro registro = registros[i];
-//                mDao.insert(registro);
-//            }
             return null;
         }
     }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GasApp</string>
+    <string name="app_name">GasBook</string>
     <!--Menu -->
     <string name="geo">Geo</string>
     <string name="seleccionar_provincia">Seleccionar provincia</string>
