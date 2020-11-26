@@ -1,5 +1,5 @@
 
-package android.training.demoapp.pojo;
+package android.training.demoapp.domain;
 
 
 import androidx.room.Entity;

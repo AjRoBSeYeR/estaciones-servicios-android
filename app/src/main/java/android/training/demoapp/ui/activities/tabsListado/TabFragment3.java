@@ -4,7 +4,7 @@ package android.training.demoapp.ui.activities.tabsListado;
 import android.content.Context;
 import android.os.Bundle;
 import android.training.demoapp.adapters.EstacionesServicioAdapter;
-import android.training.demoapp.pojo.ListaEESSPrecio;
+import android.training.demoapp.domain.ListaEESSPrecio;
 import android.training.demoapp.R;
 import android.training.demoapp.ui.tools.sharedPrefs.SharedPrefs;
 import android.training.demoapp.viewModel.EstacionesViewModel;
@@ -44,7 +44,7 @@ public class TabFragment3 extends Fragment {
   private int limiteCombustible;
   public TabFragment3()  {
     this.diesel = 2;
-    this.limiteCombustible = 10;
+    this.limiteCombustible = 50;
   }
 
 
@@ -53,7 +53,7 @@ public class TabFragment3 extends Fragment {
                            Bundle savedInstanceState) {
     context = this.getActivity();
     // Inflate the layout for this fragment
-    rootView = inflater.inflate(R.layout.fragment_tab_fragment3, container, false);
+    rootView = inflater.inflate(R.layout.fragment_tab_fragment1, container, false);
 
     iniciar();
     obtenerListadoEstacionesDB();
@@ -72,21 +72,9 @@ public class TabFragment3 extends Fragment {
 
   }
 
-//  private void obtenerListadoEstacionesDB(){
-//    estacionesViewModel =  new ViewModelProvider(this).get(EstacionesViewModel.class);
-//    estacionesViewModel.getPorPrecio2(diesel,limiteCombustible).observe(this, new Observer<List<ListaEESSPrecio>>() {
-//      @Override
-//      public void onChanged(@Nullable final List<ListaEESSPrecio> est) {
-//        Log.d(LOG_TAG, "provc"+ est);
-//        ArrayList<ListaEESSPrecio> ListaEESSPrecio = (ArrayList<ListaEESSPrecio>) est;
-//        adapter.setRegistros(ListaEESSPrecio);
-//      }
-//    });
-//  }
-
   private void obtenerListadoEstacionesDB(){
-    estacionesViewModel = new ViewModelProvider(this).get(EstacionesViewModel.class);
-    estacionesViewModel.getDieselMasBarato().observe(this, new Observer<List<ListaEESSPrecio>>() {
+    estacionesViewModel =  new ViewModelProvider(this).get(EstacionesViewModel.class);
+    estacionesViewModel.getPorPrecio2(diesel,limiteCombustible).observe(this, new Observer<List<ListaEESSPrecio>>() {
       @Override
       public void onChanged(@Nullable final List<ListaEESSPrecio> est) {
         Log.d(LOG_TAG, "provc"+ est);
@@ -95,5 +83,17 @@ public class TabFragment3 extends Fragment {
       }
     });
   }
+
+//  private void obtenerListadoEstacionesDB(){
+//    estacionesViewModel = new ViewModelProvider(this).get(EstacionesViewModel.class);
+//    estacionesViewModel.getDieselMasBarato().observe(this, new Observer<List<ListaEESSPrecio>>() {
+//      @Override
+//      public void onChanged(@Nullable final List<ListaEESSPrecio> est) {
+//        Log.d(LOG_TAG, "provc"+ est);
+//        ArrayList<ListaEESSPrecio> ListaEESSPrecio = (ArrayList<ListaEESSPrecio>) est;
+//        adapter.setRegistros(ListaEESSPrecio);
+//      }
+//    });
+//  }
 
 }

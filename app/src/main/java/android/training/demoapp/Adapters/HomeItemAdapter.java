@@ -1,7 +1,7 @@
 package android.training.demoapp.adapters;
 
 import android.content.Context;
-import android.training.demoapp.pojo.HomeItem;
+import android.training.demoapp.domain.HomeItem;
 import android.training.demoapp.R;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,8 +24,6 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.HomeVi
         layoutInflater = LayoutInflater.from(context);
         this.listener = listener;
     }
-
-
 
     @NonNull
     @Override
@@ -74,8 +72,6 @@ public class HomeItemAdapter extends RecyclerView.Adapter<HomeItemAdapter.HomeVi
             });
         }
     }
-
-
 
     public interface onItemClick {
         void onItemClick(HomeItem item);

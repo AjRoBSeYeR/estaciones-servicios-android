@@ -3,7 +3,7 @@ package android.training.demoapp.viewModel;
 import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-import android.training.demoapp.pojo.ListaEESSPrecio;
+import android.training.demoapp.domain.ListaEESSPrecio;
 import android.training.demoapp.repository.EstacionesRepository;
 
 import java.util.List;
@@ -17,7 +17,6 @@ public class EstacionesViewModel extends AndroidViewModel {
         er = new EstacionesRepository(application);
     }
 
-
     public void insert(ListaEESSPrecio estacion) {
         er.insert(estacion);
     }
@@ -30,17 +29,9 @@ public class EstacionesViewModel extends AndroidViewModel {
         return er.getGasolinaMasBarata();
     }
 
-    public LiveData<List<ListaEESSPrecio>> getDieselMasBarato() {
-        return  er.getDieselMasBarato();
-    }
-
-    public LiveData<List<ListaEESSPrecio>> getPorPrecio(int combustible, int limit) {
-        return er.getPorPrecio(combustible, limit);
-    }
     public LiveData<List<ListaEESSPrecio>> getPorPrecio2(int combustible, int limit) {
         return er.getPorPrecio2(combustible, limit);
     }
-
 
     public LiveData<List<ListaEESSPrecio>> getCercanas(int limiteDistanciat) {
         return er.getCercanas(limiteDistanciat);

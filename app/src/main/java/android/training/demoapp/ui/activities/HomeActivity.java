@@ -6,28 +6,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
-import android.app.job.JobInfo;
-import android.app.job.JobScheduler;
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
-import android.provider.Settings;
 import android.training.demoapp.R;
 import android.training.demoapp.adapters.HomeItemAdapter;
-import android.training.demoapp.pojo.HomeItem;
-import android.training.demoapp.services.MiIntentService;
-import android.training.demoapp.services.NotificationJobService;
+import android.training.demoapp.domain.HomeItem;
 import android.training.demoapp.ui.tools.sharedPrefs.SharedPrefs;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -36,7 +26,7 @@ import java.util.List;
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class HomeActivity extends AppCompatActivity {
 //https://www.raywenderlich.com/3595916-clean-architecture-tutorial-for-android-getting-started#toc-anchor-003
-    private static final String LOG_TAG = ListadoRegistrosActivity.class.getSimpleName();
+
 
     private Context context = this;
     private Activity activity = (Activity) context;
@@ -46,11 +36,6 @@ public class HomeActivity extends AppCompatActivity {
     private String shProvincia;
 
     private ProgressBar pbarProgreso;
-
-
-
-    @Override
-    public void onBackPressed() {}
 
 
     @Override
@@ -70,17 +55,17 @@ public class HomeActivity extends AppCompatActivity {
         items.add(new HomeItem(1, context.getString(R.string.sync), context.getString(R.string.sync_desc)));
         items.add(new HomeItem(2,context.getString(R.string.listado),"Listado de estaciones de servicio. Por distancia y precio."));
         items.add(new HomeItem(3,context.getString(R.string.mapa),"Mapa con las estaciones de servicio de tu provincia"));
-        items.add(new HomeItem(4,context.getString(R.string.registro),"Calcula la media de consumo de tu vehiculo"));
-        items.add(new HomeItem(5,context.getString(R.string.extra),"Extra sin sentido"));
-        items.add(new HomeItem(6,context.getString(R.string.jobScheduler),"Prueba básica"));
+//        items.add(new HomeItem(4,context.getString(R.string.registro),"Calcula la media de consumo de tu vehiculo"));
+//        items.add(new HomeItem(5,context.getString(R.string.extra),"Extra sin sentido"));
+//        items.add(new HomeItem(6,context.getString(R.string.jobScheduler),"Prueba básica"));
 
         shProvincia = (String) SharedPrefs.getPref(context,SharedPrefs.PROVINCIA_ID);
 
-        if(shProvincia==null){
-            Intent i = new Intent(context, SyncActivity.class);
-            startActivity(i);
-            finish();
-        }
+//        if(shProvincia==null){
+//            Intent i = new Intent(context, SyncActivity.class);
+//            startActivity(i);
+//            finish();
+//        }
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
         adapter = new HomeItemAdapter(context, items, new HomeItemAdapter.onItemClick(){
 
@@ -98,11 +83,11 @@ public class HomeActivity extends AppCompatActivity {
 
 
 //Registro y  asociacion BroadcastReceiver
-        IntentFilter filter = new IntentFilter();
-        filter.addAction(MiIntentService.ACTION_PROGRESO);
-        filter.addAction(MiIntentService.ACTION_FIN);
-        ProgressReceiver rcv = new ProgressReceiver();
-        registerReceiver(rcv, filter);
+//        IntentFilter filter = new IntentFilter();
+//        filter.addAction(MiIntentService.ACTION_PROGRESO);
+//        filter.addAction(MiIntentService.ACTION_FIN);
+//        ProgressReceiver rcv = new ProgressReceiver();
+//        registerReceiver(rcv, filter);
     }
 
     @Override
@@ -111,27 +96,27 @@ public class HomeActivity extends AppCompatActivity {
         this.ajustesManager();
     }
 
-    private void scheduleJobFirebaseToRoomDataUpdate(){
-
-        // El primer parámetro es el JOB_ID. El segundo parámetro es ComponentNamepara el JobServiceque creó.
-        // El ComponentNamese utiliza para asociar el JobServicecon el JobInfoobjeto.
-        ComponentName serviceName = new ComponentName(getPackageName(),
-                NotificationJobService.class.getName());
-        JobInfo.Builder builder = new JobInfo.Builder(1, serviceName).setPeriodic(60000);
-
-
-        //Dentro del scheduleJob()método, use getSystemService()para inicializar mScheduler.
-        JobScheduler jobScheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
-
-            //Schedule the job and notify the user
-            JobInfo myJobInfo = builder.build();
-            jobScheduler.schedule(myJobInfo);
-            Toast.makeText(this, "Trabajo programado, el trabajo se ejecutará cuando " +
-                    "se cumplen las restricciones.", Toast.LENGTH_SHORT).show();
-
-
-
-    }
+//    private void scheduleJobFirebaseToRoomDataUpdate(){
+//
+//        // El primer parámetro es el JOB_ID. El segundo parámetro es ComponentNamepara el JobServiceque creó.
+//        // El ComponentNamese utiliza para asociar el JobServicecon el JobInfoobjeto.
+//        ComponentName serviceName = new ComponentName(getPackageName(),
+//                NotificationJobService.class.getName());
+//        JobInfo.Builder builder = new JobInfo.Builder(1, serviceName).setPeriodic(60000);
+//
+//
+//        //Dentro del scheduleJob()método, use getSystemService()para inicializar mScheduler.
+//        JobScheduler jobScheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
+//
+//            //Schedule the job and notify the user
+//            JobInfo myJobInfo = builder.build();
+//            jobScheduler.schedule(myJobInfo);
+//            Toast.makeText(this, "Trabajo programado, el trabajo se ejecutará cuando " +
+//                    "se cumplen las restricciones.", Toast.LENGTH_SHORT).show();
+//
+//
+//
+//    }
 
     private void ajustesManager(){
         androidx.preference.PreferenceManager.setDefaultValues(context, R.xml.ajustes, false);
@@ -158,18 +143,18 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
             //finish();
             return true;
-        case 4:
-             intent = new Intent(context, ListadoRegistrosActivity.class);
-            startActivity(intent);
-            return true;
-        case 5:
-             intent = new Intent(context, ImplicitIntentNotifi.class);
-            startActivity(intent);
-            return true;
-        case 6:
-             intent = new Intent(context, JobSchedulerActivity.class);
-            startActivity(intent);
-            return true;
+//        case 4:
+//             intent = new Intent(context, ListadoRegistrosActivity.class);
+//            startActivity(intent);
+//            return true;
+//        case 5:
+//             intent = new Intent(context, ImplicitIntentNotifi.class);
+//            startActivity(intent);
+//            return true;
+//        case 6:
+//             intent = new Intent(context, JobSchedulerActivity.class);
+//            startActivity(intent);
+//            return true;
 
         default:
            return false;
@@ -181,11 +166,11 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
-        getMenuInflater().inflate(R.menu.ajustes_menu, menu);
+//        getMenuInflater().inflate(R.menu.ajustes_menu, menu);
 
         getMenuInflater().inflate(R.menu.cerrar_menu, menu);
 
-        getMenuInflater().inflate(R.menu.lang_menu, menu);
+//        getMenuInflater().inflate(R.menu.lang_menu, menu);
         return true;
     }
     @Override
@@ -196,15 +181,15 @@ public class HomeActivity extends AppCompatActivity {
                 finish();
                 System.exit(0);
                 return true;
-            case R.id.action_language:
-                Intent languageIntent = new
-                        Intent(Settings.ACTION_LOCALE_SETTINGS);
-                startActivity(languageIntent);
-                return true;
-            case R.id.ajustes_app:
-                Intent intent = new Intent(this, AjustesActivity.class);
-                startActivity(intent);
-                return true;
+//            case R.id.action_language:
+//                Intent languageIntent = new
+//                        Intent(Settings.ACTION_LOCALE_SETTINGS);
+//                startActivity(languageIntent);
+//                return true;
+//            case R.id.ajustes_app:
+//                Intent intent = new Intent(this, AjustesActivity.class);
+//                startActivity(intent);
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -213,20 +198,20 @@ public class HomeActivity extends AppCompatActivity {
 
 
 //CLASE INTERNA PARA CAPTURAR LOS MENSAJES BORADCAST QUE ENVIA MiIntentService
-
-    public class ProgressReceiver extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if(intent.getAction().equals(MiIntentService.ACTION_PROGRESO)) {
-                int prog = intent.getIntExtra("progreso", 0);
-                pbarProgreso.setProgress(prog);
-            }
-            else if(intent.getAction().equals(MiIntentService.ACTION_FIN)) {
-                Toast.makeText(HomeActivity.this, "Tarea finalizada!", Toast.LENGTH_LONG).show();
-            }
-        }
-    }
+//
+//    public class ProgressReceiver extends BroadcastReceiver {
+//
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            if(intent.getAction().equals(MiIntentService.ACTION_PROGRESO)) {
+//                int prog = intent.getIntExtra("progreso", 0);
+//                pbarProgreso.setProgress(prog);
+//            }
+//            else if(intent.getAction().equals(MiIntentService.ACTION_FIN)) {
+//                Toast.makeText(HomeActivity.this, "Tarea finalizada!", Toast.LENGTH_LONG).show();
+//            }
+//        }
+//    }
 
 
 

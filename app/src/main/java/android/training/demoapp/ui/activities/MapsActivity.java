@@ -13,9 +13,9 @@ import android.provider.Settings;
 import android.training.demoapp.R;
 import android.training.demoapp.adapters.mapsAdapters.MapsInfoWindowAdapter;
 import android.training.demoapp.ui.activities.baseMenu.BaseNavDrawerActivity;
-import android.training.demoapp.pojo.ListaEESSPrecio;
-import android.training.demoapp.pojo.mapas.MapCluster;
-import android.training.demoapp.pojo.mapas.MarkerClusterRenderer;
+import android.training.demoapp.domain.ListaEESSPrecio;
+import android.training.demoapp.domain.mapas.MapCluster;
+import android.training.demoapp.domain.mapas.MarkerClusterRenderer;
 import android.training.demoapp.viewModel.EstacionesViewModel;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -87,14 +87,14 @@ public class MapsActivity extends BaseNavDrawerActivity implements OnMapReadyCal
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+//                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+//        drawer.addDrawerListener(toggle);
+//        toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
 
     }
 
@@ -284,10 +284,9 @@ public class MapsActivity extends BaseNavDrawerActivity implements OnMapReadyCal
     private void addItems() {
         //https://codinginfinite.com/android-google-map-custom-marker-clustering/
         //https://ahsensaeed.com/android-custom-info-window-view-on-marker-click-map-utils/
-
-// https://developers.google.com/maps/documentation/android-sdk/utility/marker-clustering
-// https://medium.com/@tonyshkurenko/work-with-clustermanager-bdf3d70fb0fd
-// https://github.com/tonyshkurenko/ClusterManagerDemo
+        // https://developers.google.com/maps/documentation/android-sdk/utility/marker-clustering
+        // https://medium.com/@tonyshkurenko/work-with-clustermanager-bdf3d70fb0fd
+        // https://github.com/tonyshkurenko/ClusterManagerDemo
         estacionesViewModel =  new ViewModelProvider(this).get(EstacionesViewModel.class);
         estacionesViewModel.getAll().observe(this, new Observer<List<ListaEESSPrecio>>() {
             @Override
@@ -391,21 +390,20 @@ private void masBarata3(){
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
 
-            case R.id.gasolinaBarata:
-                mMap.clear();
-                mClusterManager.clearItems();
-                masBarata();
-                return true;
-
+//            case R.id.gasolinaBarata:
+//                mMap.clear();
+//                mClusterManager.clearItems();
+//                masBarata();
+//                return true;
             case R.id.refreshMapa:
                 mMap.clear();
                 mClusterManager.clearItems();
                 onMapReady(mMap);
                 return true;
 
-            case R.id.ajustesMapa:
-
-                return true;
+//            case R.id.ajustesMapa:
+//
+//                return true;
 
             case R.id.mapStyle:
                 if( mMap.getMapType()==GoogleMap.MAP_TYPE_HYBRID){

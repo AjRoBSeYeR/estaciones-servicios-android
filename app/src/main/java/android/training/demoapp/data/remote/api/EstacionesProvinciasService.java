@@ -1,6 +1,6 @@
 package android.training.demoapp.data.remote.api;
 
-import android.training.demoapp.pojo.EstacionesServicio;
+import android.training.demoapp.domain.EstacionesServicio;
 import android.training.demoapp.viewModel.EstacionesViewModel;
 import android.util.Log;
 

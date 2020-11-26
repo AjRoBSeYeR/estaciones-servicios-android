@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData;
 import android.os.AsyncTask;
 import android.training.demoapp.data.local.database.ProvinciaDAO;
 import android.training.demoapp.data.local.database.RoomDB;
-import android.training.demoapp.pojo.Provincia;
+import android.training.demoapp.domain.Provincia;
 
 import java.util.List;
 
